@@ -7,5 +7,5 @@ puts "Type `exit` or `quit` to exit"
 
 loop do
   cmd = STDIN.gets.chomp
-  break if exit_command?(cmd)
+  exit_command?(cmd) && break
 end
