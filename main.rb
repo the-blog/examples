@@ -14,8 +14,12 @@ def commands_processor(cmd)
   end
 end
 
+def get_command
+  STDIN.gets.chomp.downcase.strip
+end
+
 loop do
-  cmd = STDIN.gets.chomp.downcase
+  cmd = get_command
   exit_command?(cmd) && break
 
   commands_processor(cmd)
