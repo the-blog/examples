@@ -8,8 +8,6 @@ def get_command
 end
 
 loop do
-  puts MainCommandProcessor.manual
-
   cmd = get_command
   exit_command?(cmd) && break
 

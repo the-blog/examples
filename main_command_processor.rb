@@ -18,6 +18,8 @@ Please type a command.
           puts 'Command 1'
         when 'command 2'
           puts 'Command 2'
+        when 'help'
+          puts MainCommandProcessor.manual
         else
           puts 'Unknown command'
       end
