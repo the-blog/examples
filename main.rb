@@ -1,7 +1,6 @@
 require_relative 'exit'
 require_relative 'main_command_processor'
 
-puts "Type the command"
 exit_instruction
 
 def get_command
@@ -9,6 +8,8 @@ def get_command
 end
 
 loop do
+  puts MainCommandProcessor.manual
+
   cmd = get_command
   exit_command?(cmd) && break
 
