@@ -1,7 +1,7 @@
-require_relative 'exit'
+require_relative 'exit_processor'
 require_relative 'main_command_processor'
 
-exit_instruction
+puts ExitProcessor.manual
 
 def get_command
   STDIN.gets.chomp.downcase.strip
@@ -9,7 +9,7 @@ end
 
 loop do
   cmd = get_command
-  exit_command?(cmd) && break
+  ExitProcessor.exit?(cmd) && break
 
   MainCommandProcessor.process(cmd)
 end
