@@ -1,8 +1,8 @@
 module ExitProcessor
   class << self
     def manual
-      puts "Type `exit` or `quit` to exit"
-      puts "Type `help` to get help"
+      puts "Type `exit` or `quit` to exit".light_green
+      puts "Type `help` to get help".light_yellow
     end
 
     def exit?(cmd)
