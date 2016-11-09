@@ -11,9 +11,4 @@ def get_command
   STDIN.gets.chomp.downcase.strip
 end
 
-loop do
-  cmd = get_command
-  ExitProcessor.exit?(cmd) && break
-
-  MainCommandProcessor.process(cmd)
-end
+MainCommandProcessor.cli

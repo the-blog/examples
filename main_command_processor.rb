@@ -24,5 +24,14 @@ Please type a command.
           puts 'Unknown command'
       end
     end
+
+    def cli
+      loop do
+        cmd = get_command
+        ExitProcessor.exit?(cmd) && break
+
+        MainCommandProcessor.process(cmd)
+      end
+    end
   end
 end
