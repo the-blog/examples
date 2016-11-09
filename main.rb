@@ -4,11 +4,7 @@ Bundler.require(:default)
 
 require_relative 'exit_processor'
 require_relative 'main_command_processor'
+require_relative 'command_line_helper'
 
 puts ExitProcessor.manual
-
-def get_command
-  STDIN.gets.chomp.downcase.strip
-end
-
 MainCommandProcessor.cli

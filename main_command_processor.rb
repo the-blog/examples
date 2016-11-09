@@ -27,9 +27,8 @@ Please type a command.
 
     def cli
       loop do
-        cmd = get_command
+        cmd = CommandLineHelper.get_command
         ExitProcessor.exit?(cmd) && break
-
         MainCommandProcessor.process(cmd)
       end
     end
