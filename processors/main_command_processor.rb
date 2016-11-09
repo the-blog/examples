@@ -2,11 +2,16 @@ module MainCommandProcessor
   class << self
     def manual
       """
-Main Command Processor allow to use the following commands:
+Bills Manager. Command line based Bills Management system:
 
-1. `command 1` will show you text `Command 1`
-2. `command 2` will show you text `Command 2`
-3. Any other command will show you `Unknown command`
+Please type a command:
+
+1. `1` to start Bills Manager
+2. `2` to export the data
+3. `exit` to exit
+4. `help` to show this manual
+
+Any other command will show you `Unknown command`
 
 Please type a command.
       """
@@ -14,10 +19,10 @@ Please type a command.
 
     def process(cmd)
       case cmd
-        when 'command 1'
-          puts 'Command 1'
-        when 'command 2'
-          puts 'Command 2'
+        when '1'
+          BillsProcessor.cli
+        when '2'
+          ExportProcessor.cli
         when 'help'
           puts MainCommandProcessor.manual
         else
