@@ -1,0 +1,16 @@
+mkdir helpers
+mkdir processors
+
+git mv command_line_helper.rb helpers
+git mv exit_processor.rb processors
+git mv main_command_processor.rb processors
+
+~~~
+deleted:    command_line_helper.rb
+deleted:    exit_processor.rb
+deleted:    main_command_processor.rb
+~~~
+renamed:    command_line_helper.rb -> helpers/command_line_helper.rb
+renamed:    exit_processor.rb -> processors/exit_processor.rb
+renamed:    main_command_processor.rb -> processors/main_command_processor.rb
+~~~
