@@ -1,0 +1,16 @@
+$ ruby console.rb
+
+> bill_1 = Bill.new
+=> #<Bill:0x007fd8718a0768 @title="No Title">
+
+> bill_2 = Bill.new
+=> #<Bill:0x007fd8718a0768 @title="No Title">
+
+> bill_1.title # => 'No Title'
+> bill_2.title # => 'No Title'
+
+> bill_1.title = 'Bill for Lunch'
+> bill_2.title = 'Bill for Dinner'
+
+> bill_1.title # => 'No Title'
+> bill_2.title # => 'No Title'
