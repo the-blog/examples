@@ -1,7 +1,14 @@
 module BillsProcessor
   class << self
+    def greeting
+puts """
+You are in the `Bills` Processor
+type `help` to show the list of commands
+""".light_yellow
+    end
+
     def manual
-      """
+puts """
 Bills Manager. Bills Processor
 
 Please type a command:
@@ -14,31 +21,35 @@ Please type a command:
 Any other command will show you `Unknown command`
 
 Please type a command.
-      """
+""".light_cyan
     end
 
     def process(cmd)
       case cmd
         when '1'
-          BillsProcessor.create
+          create
+          greeting
         when '2'
-          BillsProcessor.list
+          list
+          greeting
         when '3'
-          BillsProcessor.destroy
+          destroy
+          greeting
         when 'help'
-          puts BillsProcessor.manual
+          manual
         else
           puts 'Unknown command'
+          greeting
       end
     end
 
     def cli
-      puts BillsProcessor.manual
+      manual
 
       loop do
         cmd = CommandLineHelper.get_command
         ExitProcessor.exit?(cmd) && break
-        BillsProcessor.process(cmd)
+        process(cmd)
       end
     end
 
