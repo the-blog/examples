@@ -1,0 +1,10 @@
+$ ruby console.rb
+
+> bill = Bill.new
+=> #<Bill:0x007fabbb183a30 @title="No Title", @cost=0.0>
+
+> bill.title = 'Mobile calling'
+> bill.cost = 99.8
+
+> bill
+=> #<Bill:0x007fabbb1785b8 @title="Mobile calling", @cost=99.8>
