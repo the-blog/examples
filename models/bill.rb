@@ -1,6 +1,5 @@
 class Bill
-  attr_reader :title, :cost
-  attr_writer :title, :cost
+  attr_accessor :title, :cost
 
   def initialize
     @title = 'No Title'
