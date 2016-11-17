@@ -1,22 +1,9 @@
 class Bill
+  attr_reader :title, :cost
+  attr_writer :title, :cost
+
   def initialize
     @title = 'No Title'
     @cost  = 0.0
-  end
-
-  def title
-    @title
-  end
-
-  def title=(string)
-    @title = string
-  end
-
-  def cost
-    @cost
-  end
-
-  def cost=(value)
-    @cost = value
   end
 end
