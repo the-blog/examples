@@ -1,0 +1,2 @@
+> bill.validate_title
+NoMethodError: private method `validate_title' called for #<Bill:0x007fb41b8d6388>
