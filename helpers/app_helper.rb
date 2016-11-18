@@ -11,14 +11,22 @@ def app_processors_path
 end
 
 def require_app_models
-  require "#{ app_models_path }/bill"
-  require "#{ app_models_path }/phone_bill"
-  require "#{ app_models_path }/transport_bill"
+  [
+    'bill',
+    'phone_bill',
+    'transport_bill'
+  ].each do |file_name|
+    require "#{ app_models_path }/#{ file_name }"
+  end
 end
 
 def require_app_processors
-  require "#{ app_processors_path }/exit_processor"
-  require "#{ app_processors_path }/main_command_processor"
-  require "#{ app_root }/bills_processor"
-  require "#{ app_processors_path }/export_processor"
+  [
+    'exit_processor',
+    'main_command_processor',
+    'bills_processor',
+    'export_processor'
+  ].each do |file_name|
+    require "#{ app_processors_path }/#{ file_name }"
+  end
 end
