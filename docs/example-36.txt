@@ -1,0 +1,23 @@
+> ruby test/models/transport_bill.rb
+
+ERROR["test_cost_after_create", TestTransportBill, 0.0009387210011482239]
+test_cost_after_create#TestTransportBill (0.00s) NameError:
+
+NameError: uninitialized constant TestTransportBill::TransportBill
+test/models/transport_bill.rb:5:in `setup'
+
+```
+def setup
+  @bill = TransportBill.new
+end
+
+=> TestTransportBill::TransportBill
+```
+
+```
+def setup
+  @bill = ::TransportBill.new
+end
+
+=> TransportBill
+```
