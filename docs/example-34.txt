@@ -1,0 +1,6 @@
+Add `gem 'minitest-reporters'` to Gemfile
+
+> bundle
+
+> ruby test/models/bill.rb
+> ruby test/models/phone_bill.rb

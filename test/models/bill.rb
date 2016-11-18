@@ -1,6 +1,9 @@
 require 'minitest/autorun'
 require_relative '../../models/bill'
 
+require "minitest/reporters"
+Minitest::Reporters.use!
+
 class TestBill < Minitest::Test
   def setup
     @bill = Bill.new

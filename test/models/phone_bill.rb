@@ -3,6 +3,9 @@ require 'minitest/autorun'
 require_relative '../../models/bill'
 require_relative '../../models/phone_bill'
 
+require "minitest/reporters"
+Minitest::Reporters.use!
+
 class TestPhoneBill < Minitest::Test
   def setup
     @bill = PhoneBill.new
