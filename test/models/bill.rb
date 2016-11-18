@@ -1,8 +1,4 @@
-require 'minitest/autorun'
-require_relative '../../models/bill'
-
-require "minitest/reporters"
-Minitest::Reporters.use!
+require_relative '../test_helper'
 
 class TestBill < Minitest::Test
   def setup
