@@ -1,0 +1,13 @@
+> mkdir -p  test/models
+
+Add `gem 'minitest'` to Gemfile
+
+> bundle
+
+> ruby test/models/bill.rb
+
+# Running:
+..
+
+Finished in 0.001140s, 1755.0495 runs/s, 1755.0495 assertions/s.
+2 runs, 2 assertions, 0 failures, 0 errors, 0 skips
