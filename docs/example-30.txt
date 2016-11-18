@@ -1,0 +1,5 @@
+> bill = Bill.new
+ => #<Bill:0x007fd8f5819798 @title="No Title", @cost=0.0, @errors=[]>
+
+> phone_bill = PhoneBill.new
+ => #<PhoneBill:0x007fd8f50c06b8 @title="No Title", @cost=0.0, @errors=[]>

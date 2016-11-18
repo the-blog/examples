@@ -9,6 +9,7 @@ require_relative 'processors/export_processor'
 require_relative 'helpers/command_line_helper'
 
 require_relative 'models/bill'
+require_relative 'models/phone_bill'
 
 ExitProcessor.manual
 MainCommandProcessor.cli

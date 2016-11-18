@@ -1,0 +1,2 @@
+class PhoneBill < Bill
+end
