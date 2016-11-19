@@ -90,11 +90,7 @@ Please type a command.
 
       @bill = PhoneBill.new
 
-      puts "Please type a title:".red
-      print '> '
-      title = CommandLineHelper.get_input
-      @bill.title = title.to_s
-
+      set_bill_title(@bill)
       set_bill_cost(@bill)
 
       puts "Check the data".red
@@ -127,6 +123,13 @@ Please type a command.
       errors.each_with_index do |error, index|
         puts "#{ index.next }: #{ error.red }"
       end
+    end
+
+    def set_bill_title(bill)
+      puts "Please type a title:".red
+      print '> '
+      title = CommandLineHelper.get_input
+      bill.title = title.to_s
     end
 
     def set_bill_cost(bill)
