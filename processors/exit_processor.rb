@@ -6,6 +6,7 @@ module ExitProcessor
     end
 
     def exit?(cmd)
+      Kernel.abort('Bill Manager says Bye!') if %w[ q! exit! quit! ].include?(cmd.downcase)
       %w[ exit quit ].include?(cmd.downcase)
     end
   end
