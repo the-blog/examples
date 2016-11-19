@@ -1,11 +1,12 @@
 class Bill
   attr_accessor :title, :cost
-  attr_reader :errors
+  attr_reader :errors, :created_at
 
   def initialize
     @title = 'No Title'
     @cost  = 0.0
 
+    @created_at = Time.now
     @errors = []
   end
 
