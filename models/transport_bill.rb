@@ -4,4 +4,3 @@ class TransportBill < Bill
     @title = 'Transport bill'
   end
 end
-

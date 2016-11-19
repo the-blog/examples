@@ -15,6 +15,7 @@ def require_app_models
     bill
     phone_bill
     transport_bill
+    storage
   ].each { |file_name| require "#{ app_models_path }/#{ file_name }" }
 end
 
