@@ -13,10 +13,12 @@ Bills Manager. Bills Processor
 
 Please type a command:
 
-1. `1` to create a new bill
-2. `2` to show the list of bills
-3. `3` to destroy a bill
-4. `help` to show this manual
+1. `1` to create a new Phone bill
+2. `2` to create a new Transport bill
+3. `3` to create a new bill
+4. `4` to show the list of bills
+5. `5` to destroy a bill
+6. `help` to show this manual
 
 Any other command will show you `Unknown command`
 
@@ -27,12 +29,18 @@ Please type a command.
     def process(cmd)
       case cmd
         when '1'
-          create
+          create_phone_bill
           greeting
         when '2'
-          list
+          create_transport_bill
           greeting
         when '3'
+          create_bill
+          greeting
+        when '4'
+          list
+          greeting
+        when '5'
           destroy
           greeting
         when 'help'
@@ -53,7 +61,15 @@ Please type a command.
       end
     end
 
-    def create
+    def create_phone_bill
+      puts "Create New Phone Bill".green
+    end
+
+    def create_transport_bill
+      puts "Create New Transport Bill".green
+    end
+
+    def create_bill
       puts "Create New Bill".green
     end
 
