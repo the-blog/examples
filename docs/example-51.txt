@@ -1,0 +1,24 @@
+Create New Phone Bill
+Please type a cost:
+> 123
+Check the data
+
+Title: Phone Calling bill
+Cost: 123.0
+Created at: 2016-11-19 17:22:25 +0300
+
+Bill is VALID
+
+===========
+
+Create New Phone Bill
+Please type a cost:
+> -123
+Check the data
+
+Title: Phone Calling bill
+Cost: -123.0
+Created at: 2016-11-19 17:22:57 +0300
+
+Bill is INVALID
+1: Cost is less than 0

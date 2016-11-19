@@ -69,7 +69,7 @@ Please type a command.
       puts "Please type a cost:".red
       print '> '
       cost = CommandLineHelper.get_input
-      @bill.cost = cost
+      @bill.cost = cost.to_f
 
       puts "Check the data".red
 
@@ -106,7 +106,9 @@ Please type a command.
     end
 
     def show_errors_array(errors)
-      p errors
+      errors.each_with_index do |error, index|
+        puts "#{ index.next }: #{ error.red }"
+      end
     end
   end
 end
