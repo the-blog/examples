@@ -1,3 +1,7 @@
-require_relative 'models/bill_spec'
-require_relative 'models/phone_bill_spec'
-require_relative 'models/transport_bill_spec'
+# google:// ruby current file directory path
+tests_root = File.expand_path('..', __FILE__)
+
+# google:// ruby class Dir
+Dir.glob("#{ tests_root }/*/*_spec.rb").each do |spec_file|
+  require spec_file
+end
