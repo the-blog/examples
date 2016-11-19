@@ -63,6 +63,20 @@ Please type a command.
 
     def create_phone_bill
       puts "Create New Phone Bill".green
+
+      @bill = PhoneBill.new
+
+      puts "Please type a cost:".red
+      print '> '
+      cost = CommandLineHelper.get_input
+      @bill.cost = cost
+
+      puts "Check the data".red
+
+      puts @bill.title.cyan
+      puts @bill.cost.to_s.cyan
+      puts @bill.created_at.to_s.cyan
+      puts @bill.valid?
     end
 
     def create_transport_bill

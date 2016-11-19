@@ -1,0 +1,8 @@
+Create New Phone Bill
+Please type a cost:
+> 45.4
+Check the data
+Phone Calling bill
+45.4
+2016-11-19 17:08:59 +0300
+false
