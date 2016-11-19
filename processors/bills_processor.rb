@@ -78,10 +78,37 @@ Please type a command.
 
     def create_transport_bill
       puts "Create New Transport Bill".green
+
+      @bill = PhoneBill.new
+
+      puts "Please type a cost:".red
+      print '> '
+      cost = CommandLineHelper.get_input
+      @bill.cost = cost.to_f
+
+      puts "Check the data".red
+
+      show_bill(@bill)
     end
 
     def create_bill
       puts "Create New Bill".green
+
+      @bill = PhoneBill.new
+
+      puts "Please type a title:".red
+      print '> '
+      title = CommandLineHelper.get_input
+      @bill.title = title.to_s
+
+      puts "Please type a cost:".red
+      print '> '
+      cost = CommandLineHelper.get_input
+      @bill.cost = cost.to_f
+
+      puts "Check the data".red
+
+      show_bill(@bill)
     end
 
     def list
