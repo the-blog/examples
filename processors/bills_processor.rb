@@ -66,10 +66,7 @@ Please type a command.
 
       @bill = PhoneBill.new
 
-      puts "Please type a cost:".red
-      print '> '
-      cost = CommandLineHelper.get_input
-      @bill.cost = cost.to_f
+      set_bill_cost(@bill)
 
       puts "Check the data".red
 
@@ -81,10 +78,7 @@ Please type a command.
 
       @bill = PhoneBill.new
 
-      puts "Please type a cost:".red
-      print '> '
-      cost = CommandLineHelper.get_input
-      @bill.cost = cost.to_f
+      set_bill_cost(@bill)
 
       puts "Check the data".red
 
@@ -101,10 +95,7 @@ Please type a command.
       title = CommandLineHelper.get_input
       @bill.title = title.to_s
 
-      puts "Please type a cost:".red
-      print '> '
-      cost = CommandLineHelper.get_input
-      @bill.cost = cost.to_f
+      set_bill_cost(@bill)
 
       puts "Check the data".red
 
@@ -136,6 +127,13 @@ Please type a command.
       errors.each_with_index do |error, index|
         puts "#{ index.next }: #{ error.red }"
       end
+    end
+
+    def set_bill_cost(bill)
+      puts "Please type a cost:".red
+      print '> '
+      cost = CommandLineHelper.get_input
+      bill.cost = cost.to_f
     end
   end
 end
