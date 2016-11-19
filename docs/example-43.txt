@@ -1,0 +1,9 @@
+> git mv test/models/bill.rb test/models/bill_spec.rb
+> git mv test/models/phone_bill.rb test/models/phone_bill_spec.rb
+> git mv test/models/transport_bill.rb test/models/transport_bill_spec.rb
+
+> git status
+
+  renamed: test/models/bill.rb -> test/models/bill_spec.rb
+  renamed: test/models/phone_bill.rb -> test/models/phone_bill_spec.rb
+  renamed: test/models/transport_bill.rb -> test/models/transport_bill_spec.rb
