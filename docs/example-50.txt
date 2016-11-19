@@ -1,0 +1,11 @@
+Create New Phone Bill
+Please type a cost:
+> 234
+Check the data
+
+Title: Phone Calling bill
+Cost: 234
+Created at: 2016-11-19 17:18:06 +0300
+
+Bill is INVALID
+["Cost is not a Numeric value"]

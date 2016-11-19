@@ -73,10 +73,7 @@ Please type a command.
 
       puts "Check the data".red
 
-      puts @bill.title.cyan
-      puts @bill.cost.to_s.cyan
-      puts @bill.created_at.to_s.cyan
-      puts @bill.valid?
+      show_bill(@bill)
     end
 
     def create_transport_bill
@@ -93,6 +90,23 @@ Please type a command.
 
     def destroy
       puts "Destroy a Bill".red
+    end
+
+    def show_bill(bill)
+      puts
+      puts "Title: #{ bill.title.cyan }"
+      puts "Cost: #{ bill.cost.to_s.cyan }"
+      puts "Created at: #{ bill.created_at.to_s.cyan }"
+      puts
+
+      validation_status = bill.valid? ? 'VALID'.green : 'INVALID'.red
+      puts "Bill is #{ validation_status }"
+
+      show_errors_array(bill.errors) unless bill.valid?
+    end
+
+    def show_errors_array(errors)
+      p errors
     end
   end
 end
