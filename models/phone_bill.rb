@@ -1,6 +1,6 @@
 class PhoneBill < Bill
-  def initialize
-    super
+  def initialize(args = {})
+    super(args)
     @title = 'Phone Calling bill'
   end
 end

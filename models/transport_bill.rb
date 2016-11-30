@@ -1,6 +1,6 @@
 class TransportBill < Bill
-  def initialize
-    super
+  def initialize(args = {})
+    super(args)
     @title = 'Transport bill'
   end
 end
