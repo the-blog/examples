@@ -35,7 +35,7 @@ class TestStorageInterface < Minitest::Test
   end
 
   def test_bills_as_getter
-    assert_equal storage.bills, []
+    assert_equal storage.bills.class, Array
   end
 
   def test_bills_must_be_just_a_getter
