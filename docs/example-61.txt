@@ -1,0 +1,2 @@
+ruby test/models/storage_spec.rb --name test_bills_as_getter
+ruby test/models/storage_spec.rb --name test_bills_must_be_just_a_getter

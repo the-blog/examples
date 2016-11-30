@@ -34,6 +34,32 @@ class TestStorageInterface < Minitest::Test
     assert_match /Bill has validation errors/, exception.message
   end
 
+  def test_bills_as_getter
+    assert_equal storage.bills, []
+  end
+
+  def test_bills_must_be_just_a_getter
+    storage.bills << Bill.new
+    assert_equal storage.bills, []
+  end
+
+  def test_add_bill_works_well
+    original_size = storage.bills.size
+    valid_bill = Bill.new(title: 'Custom Title', cost: 42)
+
+    storage.add_bill(valid_bill)
+    assert_equal storage.bills.size, (original_size + 1)
+  end
+
+  def test_remove_bill_works_well
+    original_size = storage.bills.size
+    valid_bill = Bill.new(title: 'Custom Title', cost: 42)
+
+    storage.add_bill(valid_bill)
+    storage.remove_bill(valid_bill)
+    assert_equal storage.bills.size, original_size
+  end
+
   private
 
   def storage
