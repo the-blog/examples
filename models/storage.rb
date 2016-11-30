@@ -13,5 +13,15 @@ class Storage
     @@instance
   end
 
+  def add_bill(bill)
+    @bills << bill if bill.valid?
+    bill
+  end
+
+  def remove_bill(bill)
+    @bills = @bills.delete_if {|bill_item| bill_item == bill }
+  end
+
   private_class_method :new
+
 end
