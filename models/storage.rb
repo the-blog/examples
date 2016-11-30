@@ -1,6 +1,14 @@
 class Storage
   attr_reader :bills
 
+  class InvalidBill < RuntimeError
+    attr_reader :message
+
+    def initialize
+      @message = 'Bill has validation errors'
+    end
+  end
+
   def initialize
     @bills = []
   end
@@ -14,7 +22,8 @@ class Storage
   end
 
   def add_bill(bill)
-    @bills << bill if bill.valid?
+    raise InvalidBill.new unless bill.valid?
+    @bills << bill
     bill
   end
 

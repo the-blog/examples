@@ -27,7 +27,7 @@ class TestStorageInterface < Minitest::Test
   def test_add_invalid_bill
     bill = PhoneBill.new(cost: -1)
 
-    exception = assert_raises InvalidBill do
+    exception = assert_raises ::Storage::InvalidBill do
       storage.add_bill(bill)
     end
 
