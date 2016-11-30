@@ -8,5 +8,12 @@ class TestStorage < Minitest::Test
 
     assert_match /private method `new'/, exception.message
   end
-end
 
+  def test_singleton
+    @storage_1 = Storage.instance
+    @storage_2 = Storage.instance
+
+    assert_equal @storage_1, @storage_2
+    assert_equal @storage_1.object_id, @storage_2.object_id
+  end
+end
